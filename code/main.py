@@ -40,3 +40,14 @@ print("\n-------------------------------\n")
 print(df1.info())
 print("\n-------------------------------\n\n")
 
+
+''' 
+        Create a new column "IsDelayed" to indicate whether the flight 
+        was delayed or not
+        In Aviation industry typically considers a flight delayed if the 
+        departure delay is 15 minutes or more
+'''
+df1["IsDelayed"] = df1["DepartureDelay"]> 15
+# Display the value counts to see how many flights were delayed vs not delayed
+print(df1["IsDelayed"].value_counts())
+print("\n-------------------------------\n")
