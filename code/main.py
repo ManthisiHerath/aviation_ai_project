@@ -40,6 +40,7 @@ print("\n-------------------------------\n")
 print(df1.info())
 print("\n-------------------------------\n\n")
 
+
 ''' 
         Create a new column "IsDelayed" to indicate whether the flight 
         was delayed or not
