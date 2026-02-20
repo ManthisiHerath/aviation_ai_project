@@ -5,11 +5,11 @@ print(df.head()) # Display the first 5 rows of the dataset
 print("\n-------------------------------\n")
 print(df.shape) #how many flights you have  #how many columns (features)
 print("\n-------------------------------\n")
-print(df.columns) #list of all column names
+print(df.columns) # List of all column names
 print("\n-------------------------------\n")
 print(df.isnull().sum()) # Check for missing values in each column
 print("\n-------------------------------\n")
-print(df.describe())
+print(df.describe()) # Get summary statistics for numerical columns
 print("\n-------------------------------\n\n")
 
 '''
@@ -39,3 +39,14 @@ print(df1.head())
 print("\n-------------------------------\n")
 print(df1.info())
 print("\n-------------------------------\n\n")
+
+''' 
+        Create a new column "IsDelayed" to indicate whether the flight 
+        was delayed or not
+        In Aviation industry typically considers a flight delayed if the 
+        departure delay is 15 minutes or more
+'''
+df1["IsDelayed"] = df1["DepartureDelay"]> 15
+# Display the value counts to see how many flights were delayed vs not delayed
+print(df1["IsDelayed"].value_counts())
+print("\n-------------------------------\n")
