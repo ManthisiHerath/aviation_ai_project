@@ -25,5 +25,3 @@ print("\n--- After processing date & time ---\n")
 print(df1.head())
 print(df1.info())
 
-
-print("\n-------------  Day 003 - 12/21/2025  ------------------\n")
